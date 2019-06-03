@@ -11,7 +11,6 @@ matrix:
 stages:
   - name: tests
   - name: release
-    if: tag IS present
 
 install:
   - pip install --upgrade pip
@@ -64,4 +63,4 @@ jobs:
       services:
         - docker
       script:
-        - make superset-docker-push-latest-release
+        - echo make superset-docker-push-latest-release
